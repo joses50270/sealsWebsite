@@ -1,0 +1,14 @@
+<div id="input">
+
+  <h1>Admin Login</h1>
+
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+  <input type="text" [(ngModel)] = "credentials.email" name = "email" #email = "ngModel"  placeholder = "Email" required>
+  <input type = "password" [(ngModel)] = "credentials.password" name = "password" #password = "ngModel"  placeholder = "Password" required>
+  <button [disabled]="!loginForm.valid"  type="submit">Log In</button>
+
+  </form>
+  
+
+
+</div>

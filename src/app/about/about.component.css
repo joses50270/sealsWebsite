@@ -1,0 +1,49 @@
+#titleText{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 7%;
+    color: #333745;
+}
+.aboutMe{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin-top: 5%;
+    display: inline-block;
+    
+}
+#imgPlaceholder{
+   border:solid 1px #333745;
+   border-radius: 5%;
+   margin-left: 5%;
+   height: 175px;
+   width: 175px;
+   display: block;
+   margin-left: 43%;
+}
+#firstLine{
+    margin-left: 8%;
+}
+#lastLine{
+    margin-left:33%;
+    margin-top: 1%; 
+    font-size: 25px;
+}
+#codeImg{
+    margin-left: 26%; 
+    margin-top: 6%;
+}
+#codeText{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+.active{
+   opacity: 100%;
+   transition:0.4s;
+}
+.inactive{
+    opacity: 0;
+}
+.codeInterest{
+    display: block
+}
