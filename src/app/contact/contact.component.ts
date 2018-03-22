@@ -43,10 +43,12 @@ export class ContactComponent implements OnInit {
      email: this.email,
      msg: this.message
    }
-   this.authService.sendMsg(this.contactObj).subscribe(message => console.log(message));
-
-
-
-
+   this.authService.sendMsg(this.contactObj).subscribe((data)=>{
+     this.first = "";
+     this.last = "";
+     this.email = "";
+     this.message = "";
+     alert('Message has been sent')
+   });
 }
 }

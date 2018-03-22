@@ -1,0 +1,38 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+</head>
+
+<body>
+  <h1 id="title">
+    Welcome To My Blog!
+  </h1>
+  <hr>
+  <h1 id="subTitle">
+    Here you can read on my experience through the seals program, where I learned how to code and how to become a better leader.
+  </h1>
+  <hr>
+
+  <button  id="tPost"> << Today 's Post</button>
+<button  id = "pPost" >Previous Post >> </button>
+
+<div class = "post" >
+    <b class = "date" >March 14th, 2018</b>
+    <h2 class = "content" >Today after spending time talking to the computer science proffessor from CSULB I felt extremely inspired. I asked on the best way to learn python and he gave me plenty of helpful advice I plan on implementing when I practice python. I aspire to one day be as inspirational and be able to inspire other youth just like he did to me.</h2>
+</div>
+<h4> Have any thoughts? Post a comment below!</h4>
+
+<form #contactForm ="ngForm" (ngSubmit) ="onSubmit()">
+  
+    <input class="comment first" type="text" placeholder="First Name" required [(ngModel)]="first" name="first" required>
+  
+    <input class="comment last"  type="text" placeholder="Last Name" required [(ngModel)]="last" name="last" required><br>
+
+    <textarea class="msg" placeholder="Message" required [(ngModel)]="message" name="message" required></textarea>
+  
+  <button [disabled]="!contactForm.valid" class="btn" type="submit">Submit</button>
+</form>
+
+<div *ngFor="let comment of comments">
+  <h5>{{comment.first}} {{comment.last}} {{comment.msg}}</h5>
+</div>
+</body>

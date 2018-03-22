@@ -19,15 +19,15 @@
   </h1>
   <form #contactForm ="ngForm" (ngSubmit) ="onSubmit()">
 
-    <input class="email highlight" type="text" placeholder="Email" required [(ngModel)]="email" name="email" >
+    <input class="email highlight" type="text" placeholder="Email" required [(ngModel)]="email" name="email" required>
   
-    <input class="names highlight" type="text" placeholder="First Name" required [(ngModel)]="first" name="first">
+    <input class="names highlight" type="text" placeholder="First Name" required [(ngModel)]="first" name="first" required>
   
-    <input class="names highlight"  type="text" placeholder="Last Name" required [(ngModel)]="last" name="last"><br>
+    <input class="names highlight"  type="text" placeholder="Last Name" required [(ngModel)]="last" name="last" required><br>
 
-    <textarea class="message msgHighlight" placeholder="Message" required [(ngModel)]="message" name="message"></textarea>
+    <textarea class="message msgHighlight" placeholder="Message" required [(ngModel)]="message" name="message" required></textarea>
   
-  <button class="btn" type="submit">Submit</button>
+  <button [disabled]="!contactForm.valid" class="btn" type="submit">Submit</button>
   
   </form>
   <div id="popUp" class="modal">

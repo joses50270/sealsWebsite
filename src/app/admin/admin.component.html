@@ -1,14 +1,21 @@
-<div id="input">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+</head>
 
-  <h1>Admin Login</h1>
+<body>
+  <div id="login">
 
-  <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
-  <input type="text" [(ngModel)] = "credentials.email" name = "email" #email = "ngModel"  placeholder = "Email" required>
-  <input type = "password" [(ngModel)] = "credentials.password" name = "password" #password = "ngModel"  placeholder = "Password" required>
-  <button [disabled]="!loginForm.valid"  type="submit">Log In</button>
+    <h1>Admin Login</h1>
 
-  </form>
-  
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+      <input class = "highlight" id = "email" type="text" [(ngModel)]="credentials.email" name="email" #email="ngModel" placeholder="Email" required>
+      <input class = "highlight" id = "password" type="password" [(ngModel)]="credentials.password" name="password" #password="ngModel" placeholder="Password" required><br>
+      <button class = "btn" [disabled]="!loginForm.valid" type="submit">Log In</button>
+
+    </form>
 
 
-</div>
+
+  </div>
+</body>

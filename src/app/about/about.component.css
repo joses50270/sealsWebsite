@@ -2,31 +2,35 @@
     text-align: center;
     font-family: 'Roboto', sans-serif;
     padding-top: 7%;
+    padding-left: 15%;
     color: #333745;
 }
 .aboutMe{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     margin-top: 5%;
-    display: inline-block;
+   
     
 }
 #imgPlaceholder{
    border:solid 1px #333745;
    border-radius: 5%;
-   margin-left: 5%;
    height: 175px;
    width: 175px;
    display: block;
    margin-left: 43%;
+   margin-top: 5%;
 }
 #firstLine{
-    margin-left: 8%;
+    margin-bottom: 1%;
+    text-align: center;
+    margin-left: 4%
 }
 #lastLine{
     margin-left:33%;
     margin-top: 1%; 
     font-size: 25px;
+    padding-bottom: 7%;
 }
 #codeImg{
     margin-left: 26%; 
@@ -37,13 +41,98 @@
     font-size: 20px;
     text-align: center;
 }
-.active{
-   opacity: 100%;
-   transition:0.4s;
-}
-.inactive{
-    opacity: 0;
-}
 .codeInterest{
     display: block
+}
+.main{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    padding-top: 10%;
+}
+.primary{
+    flex: 1;
+    margin-bottom: 1%;
+}
+.secondary{
+    flex: 1;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    padding-right: 10%;
+}
+.myInterests{
+    display:flex;
+}
+.code{
+    flex:1;
+    background-color: #56CBF9;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    color: black;
+}
+.art{
+    flex: 1;
+    background-color:  #FE5F55;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    color: white;
+}
+.design{
+    flex:1;
+    background-color:#FFFD82;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    color: black;
+}
+.gaming{
+    flex:1;
+    background-color: #424B54;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    color: white;
+}
+.btn{
+    border-radius: 0;
+    height: 250px;
+    width: 250px;
+    margin-bottom: 5%;
+}
+.btn:focus{
+    outline: none;
+}
+.btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    flex: 4;
+}
+.gaming:focus{
+    color: #424B54;
+    font-size: 0px;
+    background-image: url('https://vignette.wikia.nocookie.net/streetfighter/images/8/8e/Ken-sshinryuken.gif/revision/latest?cb=20100328043856');
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: 50%; */
+}
+.code:focus{
+    color: #56CBF9;
+    font-size: 0px;
+    background-image: url('https://cdn1.iconfinder.com/data/icons/metro-ui-dock-icon-set--icons-by-dakirby/128/Coding_app_mirror.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+} 
+.art:focus{
+    color:#FE5F55 ;
+    font-size: 0px;
+    background-image: url('https://www.arket.com/content/dam/P11/curated%20search/functional-outerwear/WIND-RESISTANT-transparent.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+} 
+.design:focus{
+    color: #FFFD82;
+    font-size: 0px;
+    background-image: url('https://cdn.dribbble.com/users/729829/screenshots/1986645/gif.gif');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 }

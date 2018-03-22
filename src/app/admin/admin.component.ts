@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {AuthService} from '../_services/auth/auth.service'
-import {Router} from '@angular/router';
+import {Router, RouterModule} from '@angular/router';
 
 var localStorage = window.localStorage
 
@@ -29,21 +29,24 @@ export class AdminComponent implements OnInit {
     this.credentials = new Credentials();
   }
 
- onSubmit() {
-   this.auth.login(this.credentials)
-   .subscribe((res:ServerResponse) => {
-     console.log(res);
-     if(res.type === true){
-       console.log('logged in')
-       console.log(res.token)
-       localStorage.setItem('authorization', res.token);
-       this.credentials.email = "";
-       this.credentials.password = "";
-       this.router.navigateByUrl('');
-     }
-   }, (err) => {
-     console.log(err)
-   })
-   console.log(this.credentials)
- }
- }
+  onSubmit() {
+    this.auth.login(this.credentials)
+      .subscribe((res: ServerResponse) => {
+        console.log(res);
+        if (res.type === true) {
+          localStorage.setItem('authorization', res.token);
+          this.credentials.email = "";
+          this.credentials.password = "";
+          this.router.navigateByUrl('home');
+          console.log(res.data)
+        } else if (this.credentials.email != 'jose.santana.simontech@gmail.com') {
+          alert('Wrong email!');
+        } else if (this.credentials.password != 'santanaBanana') {
+          alert('Wrong password!');
+        }
+      }, (err) => {
+        console.log(err);
+        console.log(this.credentials);
+      });
+  }
+}

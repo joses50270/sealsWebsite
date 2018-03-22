@@ -21,5 +21,8 @@ export class AuthService {
     const endPoint = baseUrl + '/twilioForm';
     return this.http.post(endPoint, payload);
   }
-  
+  sendComment(payLoad){
+    const endPoint = baseUrl + '/comments';
+    return this.http.post(endPoint, payLoad);
+  }
 }

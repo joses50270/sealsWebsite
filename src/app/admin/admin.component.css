@@ -1,4 +1,38 @@
-#input{
-    padding-top: 5%;
-    padding-left: 5%;
+#login{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
+#email{
+    margin-left: -20%;
+    border: none;
+    border-bottom: solid 2px slategrey;
+    width: 25%;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%
+}
+#password{
+    margin-right: -20%;
+    border: none;
+    border-bottom: solid 2px slategrey;
+    width: 25%;
+    margin-top: 5%;
+
+}
+.btn{
+    width: 30%;
+    background-color:#62B6CB;
+    margin-bottom: 3%; 
+    color: white;
+}
+h1{
+    padding-top: 10%;
+}
+#password:focus, #email:focus{
+    border:none;
+    border-bottom: solid 2px #62B6CB;
+    outline: none;
+    color:#62B6CB;
+    display: inline-block; 
+ }
+ 
