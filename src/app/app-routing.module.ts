@@ -13,6 +13,7 @@ import { ArtComponent } from './art/art.component';
 import { CodeComponent } from './code/code.component';
 import { DesignComponent } from './design/design.component';
 import { GamingComponent } from './gaming/gaming.component';
+import { AuthGuard } from './_services/authGuard/auth.guard';
 
 
 const routes: Routes = [
@@ -33,27 +34,32 @@ const routes: Routes = [
     component: AdminComponent
   },
   {
-    path: 'blog',
+    path: 'blog/:id',
     component: BlogComponent
   },
   {
     path: 'admin/about',
-    component: AdminAboutComponent
+    component: AdminAboutComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin/home',
-    component: AdminHomeComponent
+    component: AdminHomeComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin/contact',
-    component: AdminContactComponent
+    component: AdminContactComponent,
+    canActivate: [AuthGuard]
   },
   {
-    path: 'admin/blog',
-    component: AdminBlogComponent
+    path: 'admin/blog/:id',
+    component: AdminBlogComponent,
+    canActivate: [AuthGuard]
+
   },
   {
-    path: 'code',
+    path: 'about/code',
     component: CodeComponent
   },
   {

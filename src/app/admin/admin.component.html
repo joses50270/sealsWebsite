@@ -11,7 +11,7 @@
     <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
       <input class = "highlight" id = "email" type="text" [(ngModel)]="credentials.email" name="email" #email="ngModel" placeholder="Email" required>
       <input class = "highlight" id = "password" type="password" [(ngModel)]="credentials.password" name="password" #password="ngModel" placeholder="Password" required><br>
-      <button class = "btn" [disabled]="!loginForm.valid" type="submit">Log In</button>
+      <button (click) = "onSubmit()" class = "btn" [disabled]="!loginForm.valid" type="submit">Log In</button>
 
     </form>
 

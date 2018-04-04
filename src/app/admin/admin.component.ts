@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {AuthService} from '../_services/auth/auth.service'
-import {Router, RouterModule} from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../_services/auth/auth.service';
+import { Router } from '@angular/router';
 
 var localStorage = window.localStorage
 
@@ -9,8 +9,7 @@ class Credentials {
   email: string;
   password: string;
 }
-
-interface ServerResponse{
+interface ServerResponse {
   type: boolean;
   data: any;
   token: any;
@@ -23,6 +22,7 @@ interface ServerResponse{
 })
 export class AdminComponent implements OnInit {
   public credentials: Credentials;
+
   constructor(public auth: AuthService, private router: Router) { }
 
   ngOnInit() {
@@ -34,19 +34,25 @@ export class AdminComponent implements OnInit {
       .subscribe((res: ServerResponse) => {
         console.log(res);
         if (res.type === true) {
-          localStorage.setItem('authorization', res.token);
+          console.log('Suu Whoop');
+          console.log(res.token);
+          localStorage.setItem('token', res.token);
+
           this.credentials.email = "";
           this.credentials.password = "";
-          this.router.navigateByUrl('home');
-          console.log(res.data)
+          this.router.navigateByUrl('admin/home');
         } else if (this.credentials.email != 'jose.santana.simontech@gmail.com') {
-          alert('Wrong email!');
+          alert('Incorrect Email');
         } else if (this.credentials.password != 'santanaBanana') {
-          alert('Wrong password!');
+          alert ('Incorrect Password');
+          console.log(res.data);
         }
+
       }, (err) => {
         console.log(err);
         console.log(this.credentials);
       });
   }
+
+
 }

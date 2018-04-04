@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -19,6 +20,9 @@ import { CodeComponent } from './code/code.component';
 import { ArtComponent } from './art/art.component';
 import { DesignComponent } from './design/design.component';
 import { GamingComponent } from './gaming/gaming.component'
+import { CommentService } from './_services/comment/comment.service';
+import { AuthGuard } from './_services/authGuard/auth.guard';
+
 
 @NgModule({
   declarations: [
@@ -41,10 +45,13 @@ import { GamingComponent } from './gaming/gaming.component'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    CommentService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

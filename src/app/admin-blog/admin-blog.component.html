@@ -1,3 +1,45 @@
-<p>
-  admin-blog works!
-</p>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+  </head>
+  
+  <body>
+    <h1 id="title">
+      Welcome To My Blog!
+    </h1>
+    <hr>
+    <h1 id="subTitle">
+      Here you can read on my experience through the seals program, where I learned how to code and how to become a better leader.
+    </h1>
+    <hr>
+  
+    <button  id="tPost"> << Today 's Post</button>
+  <button  id = "pPost" >Previous Post >> </button>
+  
+  <div class = "post" >
+      <b class = "date" >March 14th, 2018</b>
+      <h2 class = "content" >{{blog.content}}</h2>
+  </div>
+  <h4> Have any thoughts? Post a comment below!</h4>
+  <form #contactForm="ngForm">
+      <div id="userMessage" class="form-group">
+          <label for="exampleFormControlTextarea1"></label>
+          <textarea [(ngModel)]="newComment.content"  [ngModelOptions]="{standalone: true}" required name="content" #content="ngModel" class="form-control col-11" id="exampleFormControlTextarea1" rows="3" placeholder="Your Comment"></textarea>
+        </div>    
+    </form>
+    <button value="Refresh Page" type="submit" [disabled]="!contactForm.form.valid" id="submitButton" class="btn" (click)="onSubmit()">Send message</button>
+  <h2 id="cmts">Comments:</h2>
+  <ul>
+    <li *ngFor="let comment of cycleComments">
+       {{ comment.content }}
+        <ul>
+            <li *ngFor="let reply of comment.replies">
+                {{ reply.name }}: {{ reply.text }}
+            </li>
+        </ul>
+    </li>
+  </ul>
+  <form #addBlogForm = "ngForm">
+    <input [(ngModel)]="adminBlog.content" required name="content" #content="ngModel" type="text" placeholder="Put New Blog Here"><br>
+    <button type="submit" [disabled]="!addBlogForm.form.valid" id="submitButton" class="btn btn-primary" (click)="addBlog()">Send Blog</button>
+  </form>
+  </body>

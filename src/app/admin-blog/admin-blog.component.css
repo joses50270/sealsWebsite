@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,700");
+
+h1{
+    font-family: 'Roboto', sans-serif;
+}
+#title{
+    text-align: center;
+    padding-top: 8%;
+    font-size: 40px; 
+}
+#subTitle{
+    text-align: center;
+    font-size: 20px;
+}
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    display: inline-block;
+    padding-top: 3%;
+}
+#pPost{
+    float: right;
+    margin-right: 3%;
+    border-radius: 2%;
+    border: solid 2px #424B54;
+    background-color: white;
+    color: #424B54;
+    outline: none;
+}
+#pPost:focus{
+    border: solid 2px #62B6CB;
+    color: #62B6CB;
+}
+#tPost{
+    margin-left: 3%;
+    border-radius: 2%;
+    border: solid 2px #424B54;
+    background-color: white;
+    color: #424B54;
+    outline: none;
+}
+#tPost:focus{
+    border: solid 2px #62B6CB;
+    color: #62B6CB;
+}
+h2{
+    font-family: 'Roboto', sans-serif;
+}
+b{
+    font-family: 'Roboto', sans-serif;
+    font-size: 70px;
+}
+.post{
+    display: flex;
+    height: 400px;
+    width: 80%;
+    border: solid 5px #424B54;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    margin-top: 3%;
+}
+.date{
+    flex: 1;
+    background-color: #424B54;
+    margin: 0;
+    color: white;
+    text-align: center;
+    padding-top: 4%;
+}
+.content{
+    flex: 3;
+}
+h4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+/* input{
+    border: none;
+    border-bottom: solid 2px slategray;
+    width: 35%;
+    margin-top: 5%;
+    margin-bottom:3%;
+}
+input:focus{
+    border:none;
+    border-bottom: solid 2px #62B6CB;
+    outline: none;
+    color:#62B6CB;
+    display: inline-block; 
+} */
+.first{
+    margin-right: 5%;
+    margin-left: 12%;
+}
+.msg{
+    border: none;
+    border-bottom: solid 2px slategray;
+    width: 75.6%;
+    margin-left: 12%;
+}
+textarea{
+    resize: none;
+}
+.btn{
+    width: 40%;
+    margin-top: 1%;
+    background-color: #62B6CB;
+    color: white;
+}
+.msg:focus{
+    border:none;
+    border-bottom: solid 2px #62B6CB;
+    outline: none;
+    color:#62B6CB;
+    display: inline-block; 
+}
+.content{
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 10%;
+    padding-left: 3%;
+    padding-right: 3%; 
+}
+ul{
+    list-style-type: none;
+    font-size: 18px;
+}

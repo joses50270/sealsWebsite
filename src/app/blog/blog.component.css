@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,700");
+
 h1{
     font-family: 'Roboto', sans-serif;
 }
@@ -73,7 +75,7 @@ h4{
     font-size: 30px;
     text-align: center;
 }
-input{
+/* input{
     border: none;
     border-bottom: solid 2px slategray;
     width: 35%;
@@ -86,7 +88,7 @@ input:focus{
     outline: none;
     color:#62B6CB;
     display: inline-block; 
-}
+} */
 .first{
     margin-right: 5%;
     margin-left: 12%;
@@ -103,8 +105,6 @@ textarea{
 .btn{
     width: 40%;
     margin-top: 1%;
-    margin-left: 30%;
-    margin-bottom: 5%;
     background-color: #62B6CB;
     color: white;
 }
@@ -122,4 +122,8 @@ textarea{
     padding-top: 10%;
     padding-left: 3%;
     padding-right: 3%; 
+}
+ul{
+    list-style-type: none;
+    font-size: 18px;
 }

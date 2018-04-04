@@ -1,3 +1,39 @@
-<p>
-  admin-contact works!
-</p>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+  </head>
+<body>
+  <h1 id= "contactMe">
+    If you have any questions or wish to contact me for any other reason you can contact me here!
+  </h1>
+  <img id="emailImg" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Vd_4R2X6E8bhAeVprPJ9B87mwi_-WKuU0xllBIPVgmm87Fbh">
+  <h1 class="contact-info">
+    jose.santana.simontech@gmail.com
+  </h1>
+  <img id="phoneImg" src = "https://cdn4.iconfinder.com/data/icons/social-icons-6/40/phone-512.png" >
+  <h1 class="contact-info">
+   (323)-202-6452
+  </h1>
+  <h1 id="quickMsg">
+    If you would like to send a quick message instead, do so here:
+  </h1>
+  <form #contactForm ="ngForm" (ngSubmit) ="onSubmit()">
+
+    <input class="email highlight" type="text" placeholder="Email" required [(ngModel)]="email" name="email" required>
+  
+    <input class="names highlight" type="text" placeholder="First Name" required [(ngModel)]="first" name="first" required>
+  
+    <input class="names highlight"  type="text" placeholder="Last Name" required [(ngModel)]="last" name="last" required><br>
+
+    <textarea class="message msgHighlight" placeholder="Message" required [(ngModel)]="message" name="message" required></textarea>
+  
+  <button [disabled]="!contactForm.valid" class="btn" type="submit">Submit</button>
+  
+  </form>
+  <div id="popUp" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Thank you for your message!</p>
+      </div>
+  </div>
+</body>

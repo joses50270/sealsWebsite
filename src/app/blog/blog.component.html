@@ -17,11 +17,12 @@
 
 <div class = "post" >
     <b class = "date" >March 14th, 2018</b>
-    <h2 class = "content" >Today after spending time talking to the computer science proffessor from CSULB I felt extremely inspired. I asked on the best way to learn python and he gave me plenty of helpful advice I plan on implementing when I practice python. I aspire to one day be as inspirational and be able to inspire other youth just like he did to me.</h2>
+    <h2 class = "content" >{{blog.content}}</h2>
 </div>
 <h4> Have any thoughts? Post a comment below!</h4>
 
-<form #contactForm ="ngForm" (ngSubmit) ="onSubmit()">
+
+<!-- <form #contactForm ="ngForm" (ngSubmit) ="onSubmit()">
   
     <input class="comment first" type="text" placeholder="First Name" required [(ngModel)]="first" name="first" required>
   
@@ -34,5 +35,49 @@
 
 <div *ngFor="let comment of comments">
   <h5>{{comment.first}} {{comment.last}} {{comment.msg}}</h5>
+</div>  -->
+
+<!-- <div class = "container color-dark">
+  <div class = "col">
+    <p>Add a comment</p>
+  </div>
+  <div class = "col">
+    <p>Comments ({{ itemCount }}) </p>
+  </div>
 </div>
+<div class = "container color-light" [@goals]='goals.length' >
+  <div class = "col">
+    <p class = "sm">Use this form below to add a comment</p>
+
+    <form #commentForm="ngForm">
+      <input [(ngModel)]="commentForm.content" name = "content" #content="ngModel" type = "text" class = "txt"  placeholder="Write comment here .." [(ngModel)]="goalText" > 
+      <input type = "submit" class = "btn" [value] = " btnText " (click)="addItem()" >
+    </form>
+  </div>
+  <div class = "col">
+    <p class = "life-container" *ngFor='let goal of goals' >
+      {{goal}}
+    </p>
+  </div>
+</div> -->
+
+<form #contactForm="ngForm">
+    <div id="userMessage" class="form-group">
+        <label for="exampleFormControlTextarea1"></label>
+        <textarea [(ngModel)]="newComment.content"  [ngModelOptions]="{standalone: true}" required name="content" #content="ngModel" class="form-control col-11" id="exampleFormControlTextarea1" rows="3" placeholder="Your Comment"></textarea>
+      </div>    
+  </form>
+  <button value="Refresh Page" type="submit" [disabled]="!contactForm.form.valid" id="submitButton" class="btn" (click)="onSubmit()">Send message</button>
+<h2 id="cmts">Comments:</h2>
+<ul>
+  <li *ngFor="let comment of cycleComments">
+     {{ comment.content }}
+      <ul>
+          <li *ngFor="let reply of comment.replies">
+              {{ reply.name }}: {{ reply.text }}
+          </li>
+      </ul>
+  </li>
+</ul>
+
 </body>

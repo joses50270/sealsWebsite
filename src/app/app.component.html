@@ -15,8 +15,16 @@
       <li class="nav-item">
         <a class="headers nav-link" href="#" routerLink="about" >About</a>
       </li>
-      <li class="nav-item">
-        <a class="headers nav-link " href="#" routerLink="blog" >Blog</a>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+              routerLinkActive="active">
+              Blogs
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" [routerLink]="['blog', '5ab68f0e09697f27e0c90e8b']">First Blog</a>
+              <a class="dropdown-item" routerLink="blog/5ab68fda09697f27e0c90e8c">Blog Two</a>
+              <a class="dropdown-item" routerLink="blog/5ab6906509697f27e0c90e8d">Blog Three</a>
+          </div>
       </li>
       <li class="nav-item">
         <a class="headers nav-link " href="#" routerLink="contact" >Contact</a>

@@ -12,7 +12,7 @@ export class AuthService {
 
   constructor(public http: HttpClient) { }
   login(payload){
-    const endPoint = baseUrl + '/login';
+    const endPoint = baseUrl + '/admin/login';
     
     return this.http.post(endPoint, payload);
   }

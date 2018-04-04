@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-admin-home',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit() {
+    let token: any;
+    token = localStorage.getItem('token');
+    console.log('My token: ', token);
   }
-
+  onSubmit(){
+    let clearToken: any;
+    clearToken = localStorage.clear();
+    clearToken = '';
+    console.log(clearToken);
+    this.router.navigate(['home']);
+  }
 }

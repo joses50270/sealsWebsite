@@ -1,0 +1,10 @@
+#centerText{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 18%;
+}
+#infoText{
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
